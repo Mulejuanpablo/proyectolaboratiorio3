@@ -1,0 +1,27 @@
+<div class="container-products">
+    <div class="product" *ngFor="let product of products">
+      <div>
+        <p>{{ product.id }}</p>
+        <p>{{ product.nombre }}</p>
+        <p>{{ product.descripcion }}</p>
+        <p>{{ product.precio }}</p>
+        <p>{{ product.stock }}</p>
+        <button (click)="addToCart(product.id)">Agregar</button>
+      </div>
+    </div>
+</div>
+<div>
+  <h3>carrito</h3>
+  <div class="product" *ngFor="let product of productsCart">
+      <div>
+        <p>{{ product.id }}</p>
+        <p>{{ product.nombre }}</p>
+        <p>{{ product.descripcion }}</p>
+        <p>{{ product.precio }}</p>
+        <p>{{ product.stock }}</p>
+        <button (click)="eliminarElemento(product.id)">Eliminar</button>
+
+      </div>
+     </div>
+    <button>comprar</button>
+</div>
